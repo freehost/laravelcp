@@ -22,8 +22,7 @@ class CreateActivitylogTable extends Migration {
             $table->boolean('developer');
             $table->string('ip_address', 64);
             $table->string('user_agent', 255);
-            $table->timestamp('created_at')->default("0000-00-00 00:00:00");
-            $table->timestamp('updated_at')->default("0000-00-00 00:00:00");
+            $table->timestamps();
         });
     }
 
