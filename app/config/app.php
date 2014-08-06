@@ -1,5 +1,4 @@
 <?php 
-namespace Gcphost\LaravelCP;
 
 
 return array(
@@ -15,7 +14,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' =>  true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -125,7 +124,7 @@ return array(
 		
         /* Additional Providers */
 		"Khill\Lavacharts\LavachartsServiceProvider",
-		'Zizaco\Confide\ConfideServiceProvider', 
+		'Zizaco\Confide\ServiceProvider', 
         'Zizaco\Entrust\EntrustServiceProvider', 
         'Bllim\Datatables\DatatablesServiceProvider',
 		'anlutro\LaravelSettings\ServiceProvider',
@@ -134,7 +133,6 @@ return array(
 		'Raahul\LarryFour\LarryFourServiceProvider',
 		'Atticmedia\Anvard\AnvardServiceProvider',
 		'Msurguy\Honeypot\HoneypotServiceProvider',
-		'Rtablada\Profane\FilterServiceProvider',
 		'Liebig\Cron\CronServiceProvider',
 		'Dollar\Generators\GeneratorsServiceProvider',
 
@@ -222,7 +220,7 @@ return array(
 
 
         /* Additional Aliases */
-        'Confide'         => 'Zizaco\Confide\ConfideFacade',
+        'Confide'			=> 'Zizaco\Confide\Facade',
         'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
         'Carbon'          => 'Carbon\Carbon',
         'Datatables'      => 'Bllim\Datatables\Datatables',
@@ -231,12 +229,10 @@ return array(
 		'Gravatar'		  => 'Thomaswelton\LaravelGravatar\Facades\Gravatar',
 		'Anvard'		  => 'Atticmedia\Anvard\Anvard',
 		'CronWrapper'	  => 'Gcphost\LaravelCP\CronWrapper', 
-		'Filter'		  => 'Rtablada\Profane\Facades\Filter',
-		'Profane'		  => 'Rtablada\Profane\Model',
 
 		/* form */
-		'Alert'           => 'Caouecs\Bootstrap3\Alert',
-		'Breadcrumb'      => 'Caouecs\Bootstrap3\Breadcrumb',
+		//'Alert'           => 'Caouecs\Bootstrap3\Alert',
+		//'Breadcrumb'      => 'Caouecs\Bootstrap3\Breadcrumb',
 		'Form'            => 'Caouecs\Bootstrap3\Form',
 
 		/* LaravelCP */

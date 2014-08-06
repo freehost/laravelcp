@@ -15,22 +15,21 @@
         }
     ],
  	"require": {
-		"laravel/framework": "4.1.*",
-		"zizaco/confide": "dev-master",
-		"zizaco/entrust": "dev-master",
+		"laravel/framework": "4.2.*",
+		"zizaco/confide": "~4.0@dev",
+		"zizaco/entrust": "1.2.*@dev",
 		"anlutro/l4-settings": "dev-master",
 		"bllim/datatables": "*",
 		"thomaswelton/laravel-gravatar": "dev-master",
 		"khill/lavacharts" : "dev-master",
 		"regulus/activity-log": "dev-master",
-		"caouecs/laravel4-lang": "dev-master",
 		"raahul/larryfour": "1.*",
 		"hybridauth/hybridauth": "*",
 		"msurguy/honeypot": "dev-master",
-		"rtablada/profane": "dev-master",
 		"liebig/cron": "dev-master",
 		"atticmedia/anvard": "dev-master",
-		"gcphost/bootstrap3": "dev-master"
+		"gcphost/bootstrap3": "dev-master",
+		"pda/pheanstalk": "2.0.*"
 	},
 	"require-dev": {
 		"dollar/generators": "1.0.*@dev",

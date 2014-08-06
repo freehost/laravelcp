@@ -1,12 +1,16 @@
 <?php
-use Zizaco\Confide\ConfideUser;
 use Zizaco\Confide\Confide;
 use Zizaco\Confide\ConfideEloquentRepository;
 use Zizaco\Entrust\HasRole;
 use Carbon\Carbon;
 
-class User extends ConfideUser {
-    use HasRole;
+use Zizaco\Confide\ConfideUser;
+use Zizaco\Confide\ConfideUserInterface;
+
+class User extends Eloquent implements ConfideUserInterface
+{
+    use ConfideUser;
+	use HasRole;
 
 	protected $table = 'users';
 
