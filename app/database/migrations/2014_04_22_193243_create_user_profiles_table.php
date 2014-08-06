@@ -44,7 +44,7 @@ class CreateUserprofilesTable extends Migration {
             $table->string('region', 255)->nullable();
             $table->string('username', 255)->nullable();
             $table->string('coverInfoURL', 255)->nullable();
-			$table->timestamps();
+			$table->timestamps()->default('1900-01-01 00:00:00');
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

@@ -15,7 +15,7 @@ class CreateRolesTable extends Migration {
             $table->increments('id');
             $table->string('name', 255);
             $table->string('access', 255)->nullable();
-            $table->timestamps();
+            $table->timestamps()->default('1900-01-01 00:00:00');
         });
     }
 

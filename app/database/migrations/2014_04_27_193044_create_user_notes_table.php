@@ -16,7 +16,7 @@ class CreateUsernotesTable extends Migration {
             $table->integer('user_id')->unsigned()->index();
             $table->integer('admin_id')->unsigned()->nullable();
             $table->longText('note')->nullable();
-			$table->timestamps();
+			$table->timestamps()->default('1900-01-01 00:00:00');
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

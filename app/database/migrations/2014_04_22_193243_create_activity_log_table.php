@@ -22,7 +22,7 @@ class CreateActivitylogTable extends Migration {
             $table->boolean('developer');
             $table->string('ip_address', 64);
             $table->string('user_agent', 255);
-            $table->timestamps();
+            $table->timestamps()->default('1900-01-01 00:00:00');
         });
     }
 

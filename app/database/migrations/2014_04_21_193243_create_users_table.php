@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration {
             $table->string('displayname', 256)->nullable();
             $table->string('username', 255)->nullable();
             $table->string('remember_token')->nullable();
-			$table->timestamps();
+			$table->timestamps()->default('1900-01-01 00:00:00');
         });
     }
 

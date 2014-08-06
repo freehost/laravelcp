@@ -17,8 +17,8 @@ class CreateTodosTable extends Migration {
             $table->integer('status')->unsigned()->nullable();
             $table->string('title', 255)->nullable();
             $table->longText('description')->nullable();
-			$table->timestamp('due_at');
-			$table->timestamps();
+			$table->timestamp('due_at')->default('1900-01-01 00:00:00');
+			$table->timestamps()->default('1900-01-01 00:00:00');
         });
     }
 
