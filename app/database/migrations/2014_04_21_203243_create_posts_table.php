@@ -20,8 +20,8 @@ class CreatePostsTable extends Migration {
             $table->string('meta_title', 255)->nullable();
             $table->string('meta_description', 255)->nullable();
             $table->string('meta_keywords', 255)->nullable();
-            $table->timestamp('created_at')->default("1900-01-01 00:00:00");
-            $table->timestamp('updated_at')->default("1900-01-01 00:00:00");
+            $table->timestamp('created_at')->default("1970-01-01 00:00:01");
+            $table->timestamp('updated_at')->default("1970-01-01 00:00:01");
             $table->string('banner', 255)->nullable();
             $table->integer('display_author')->unsigned()->nullable();
             $table->integer('allow_comments')->unsigned()->nullable();

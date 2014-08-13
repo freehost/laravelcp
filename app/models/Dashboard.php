@@ -39,7 +39,7 @@ class Dashboard extends Eloquent {
 	}
 
 	static public function activity(){
-		return Activity::whereRaw('UNIX_TIMESTAMP(`activity_log`.`created_at`) > ? AND (activity_log.content_type="notification" OR activity_log.content_type="login")',array(Session::get('usersonline_lastcheck', time())))
+		return Activity::whereRaw('strftime("%s", `activity_log`.`created_at`) > ? AND (activity_log.content_type="notification" OR activity_log.content_type="login")',array(Session::get('usersonline_lastcheck', time())))
 							->select(array('description', 'details', 'users.displayname', 'content_type'))
 							->groupBy(DB::raw('description, details, users.displayname, content_type'))
 							->orderBy('activity_log.id', 'DESC')
@@ -48,11 +48,11 @@ class Dashboard extends Eloquent {
 	}
 
 	static public function online($value=10){
-		return DB::select('SELECT email, displayname, id, last_activity FROM users WHERE UNIX_TIMESTAMP(`last_activity`) > ? LIMIT ?', array(time()-150, $value));
+		return DB::select('SELECT email, displayname, id, last_activity FROM users WHERE strftime("%s", `last_activity`) > ? LIMIT ?', array(time()-150, $value));
 	}
 
 	static public function onlineTotal(){
-		$total=DB::select('SELECT count(*) as total FROM users WHERE UNIX_TIMESTAMP(`last_activity`) > ?', array(time()-150));
+		$total=DB::select('SELECT count(*) as total FROM users WHERE strftime("%s", `last_activity`) > ?', array(time()-150));
 		return $total[0]->total;
 	}
 

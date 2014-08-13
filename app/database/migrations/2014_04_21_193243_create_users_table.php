@@ -18,10 +18,10 @@ class CreateUsersTable extends Migration {
             $table->string('confirmation_code', 255);
             $table->boolean('confirmed')->nullable();
             $table->boolean('cancelled')->nullable();
-            $table->timestamp('created_at')->default("1900-01-01 00:00:00");
-            $table->timestamp('updated_at')->default("1900-01-01 00:00:00");
-            $table->timestamp('last_activity')->default("1900-01-01 00:00:00");
-            $table->timestamp('last_login')->default("1900-01-01 00:00:00");
+            $table->timestamp('created_at')->default("1970-01-01 00:00:01");
+            $table->timestamp('updated_at')->default("1970-01-01 00:00:01");
+            $table->timestamp('last_activity')->default("1970-01-01 00:00:01");
+            $table->timestamp('last_login')->default("1970-01-01 00:00:01");
             $table->string('displayname', 256)->nullable();
             $table->string('username', 255)->nullable();
             $table->string('remember_token')->nullable();
